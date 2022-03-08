@@ -2,18 +2,23 @@ package BIBLIOTECA;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuInicio extends JFrame{
-    private JPanel root = new JPanel();;
-    public MenuInicio(){
+    private JPanel root = new JPanel();
+    AtributosUsuarios user;
+    boolean visibilidad = false;
+    public MenuInicio(AtributosUsuarios user){
         iniciarComponentes();
         setSize(800, 500);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear");
         setLocationRelativeTo(null);
         setResizable(false);
-        setVisible(true);
         setTitle("BIBLIOTECA FACULTAD DE INGENIERIA USAC");
+        this.user = user;
+        admin();
 
     }
 
@@ -21,6 +26,7 @@ public class MenuInicio extends JFrame{
         root();
         Imagenes();
         componentes();
+        //admin();
     }
 
     private void root(){
@@ -72,6 +78,27 @@ public class MenuInicio extends JFrame{
         botonAbout.setBounds(100,350, 120,50);
         root.add(botonAbout);
 
+        botonLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                clickLogin(e);
+            }
+        });
+
     }
+
+    public void clickLogin(ActionEvent e){
+        Login ventanaLogin = new Login(this, true, user);
+        ventanaLogin.setVisible(true);
+        visibilidad = ventanaLogin.visibilidadMenu;
+
+    }
+
+    public void admin() {
+        user.setId(0, "admin");
+        user.setNombre(0, "Administrador");
+        user.setUsuario(0, "admin");
+        user.setContraseña(0, "password");
+    }
+
 
 }
