@@ -30,13 +30,13 @@ public class AdministradorPanel extends JFrame {
     }
 
     public void imagenes(){
-        ImageIcon imagen = new ImageIcon("user_icon.png");
+        ImageIcon imagen = new ImageIcon("imagenes/user_icon.png");
         JLabel user_icon = new JLabel(imagen);
         user_icon.setBounds(475, 20, 75,75);
         user_icon.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(75, 75, Image.SCALE_SMOOTH)));
         root.add(user_icon);
 
-        ImageIcon imagen2 = new ImageIcon("logo.png");
+        ImageIcon imagen2 = new ImageIcon("imagenes/logo.png");
         JLabel logo = new JLabel(imagen2);
         logo.setBounds(20, 10, 350,150);
         logo.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(350, 150, Image.SCALE_SMOOTH)));

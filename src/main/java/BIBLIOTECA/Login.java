@@ -33,7 +33,7 @@ public class Login extends JDialog {
     }
 
     private void imagenes() {
-        ImageIcon imagen = new ImageIcon("user_icon.png");
+        ImageIcon imagen = new ImageIcon("imagenes/user_icon.png");
         JLabel user_icon = new JLabel(imagen);
         user_icon.setBounds(100, 20, 100, 100);
         user_icon.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH)));
@@ -93,5 +93,6 @@ public class Login extends JDialog {
             dispose();
             visibilidadMenu = true;
         }
+
     }
 }
