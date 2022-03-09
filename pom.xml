@@ -24,7 +24,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.mycompany.recursividad.Factorial</mainClass>
+                            <mainClass>BIBLIOTECA.Biblioteca</mainClass>
                             <classpathPrefix>lib</classpathPrefix>
                         </manifest>
                     </archive>

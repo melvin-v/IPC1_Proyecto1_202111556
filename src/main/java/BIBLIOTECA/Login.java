@@ -90,7 +90,6 @@ public class Login extends JDialog {
 
     private void clickIngresar(ActionEvent e, String a) {
         if (user.getUsuario(0).equals(a) & user.getContraseña(0).equals(dato1)){
-            AdministradorPanel adminPanel = new AdministradorPanel();
             dispose();
             visibilidadMenu = true;
         }
